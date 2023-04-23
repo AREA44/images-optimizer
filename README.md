@@ -1,4 +1,4 @@
-# Image optimizer with Gulp
+# Image optimizer with gulp.js
 
 > Convert images to [WebP](https://developers.google.com/speed/webp)
 

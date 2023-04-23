@@ -1,6 +1,6 @@
 {
   "name": "@area44/gulp-images-optimizer",
-  "description": "Images optimizer with Gulp",
+  "description": "Images optimizer with gulp.js",
   "license": "MIT",
   "author": {
     "name": "ARE44",

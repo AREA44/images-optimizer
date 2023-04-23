@@ -1,0 +1,13 @@
+{
+  "name": "@area44/gulp-images-optimizer",
+  "description": "Images optimizer with Gulp",
+  "license": "MIT",
+  "author": {
+    "name": "ARE44",
+    "url": "https://github.com/AREA44"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-webp": "^4.0.1"
+  }
+}

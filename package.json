@@ -1,13 +1,22 @@
 {
-  "name": "@area44/gulp-images-optimizer",
-  "description": "Images optimizer with gulp.js",
+  "name": "@area44/images-optimizer",
+  "description": "Images optimizer",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "ARE44",
     "url": "https://github.com/AREA44"
   },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-webp": "^4.0.1"
+  "keywords": [
+    "imagemin",
+    "optimizer",
+    "minify"
+  ],
+  "dependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "imagemin-webp": "^8.0.0"
   }
 }

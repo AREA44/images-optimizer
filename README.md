@@ -1,4 +1,4 @@
-# Image optimizer
+# Image Optimizer
 
 ## Usage
 

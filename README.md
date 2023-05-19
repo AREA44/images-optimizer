@@ -1,5 +1,7 @@
 # Image Optimizer
 
+Images optimizer using Node.js
+
 ## Usage
 
 ```bash

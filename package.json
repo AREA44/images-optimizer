@@ -1,17 +1,15 @@
 {
-  "name": "@area44/images-optimizer",
-  "description": "Images optimizer",
-  "version": "23.04.25",
+  "name": "@area44/imagesoptimizer.js",
+  "description": "Images optimizer using Node.js",
+  "version": "23.05.20",
+  "private": "true",
   "license": "MIT",
   "author": {
     "name": "ARE44",
     "url": "https://github.com/AREA44"
   },
-  "keywords": [
-    "imagemin",
-    "optimizer",
-    "minify"
-  ],
+  "homepage": "https://github.com/AREA44/imagesOptimizer.js#readme",
+  "keywords": ["imagemin", "optimizer", "minify"],
   "dependencies": {
     "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
@@ -19,5 +17,6 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^10.0.1",
     "imagemin-webp": "^8.0.0"
-  }
+  },
+  "packageManager": "pnpm@8.5.1"
 }

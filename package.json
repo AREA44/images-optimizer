@@ -1,7 +1,7 @@
 {
-  "name": "@area44/imagesoptimizer.js",
+  "name": "@area44/imagesoptimizer",
   "description": "Images optimizer using Node.js",
-  "version": "23.6.2",
+  "version": "23.8.8",
   "private": "true",
   "license": "MIT",
   "author": {
@@ -22,5 +22,5 @@
     "imagemin-svgo": "^10.0.1",
     "imagemin-webp": "^8.0.0"
   },
-  "packageManager": "pnpm@8.6.11"
+  "packageManager": "pnpm@8.6.12"
 }

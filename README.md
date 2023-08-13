@@ -21,9 +21,8 @@ node src/imagemin-mozjpeg.mjs
 # See all options: https://github.com/imagemin/imagemin-pngquant
 node src/imagemin-pngquant.mjs
 
-# Convert JPG and PNG to webp with imagemin-webp
-# See all options: https://github.com/imagemin/imagemin-webp
-node src/imagemin-webp.mjs
+# Convert JPG, JPEG and PNG to Webp with sharp
+node src/convertToWebp.mjs
 
 # Optimize SVG with imagemin-svgo
 # See all options: https://github.com/imagemin/imagemin-svgo

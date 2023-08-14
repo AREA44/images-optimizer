@@ -1,12 +1,12 @@
-# Image Optimizer
+# Image Wizard
 
-Images optimizer using Node.js
+Image tools using Node.js
 
 ## Usage
 
 ```bash
-git clone https://github.com/AREA44/images-optimizer
-cd images-optimizer
+git clone https://github.com/AREA44/images-wizard
+cd images-wizard
 pnpm i
 ```
 

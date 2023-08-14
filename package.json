@@ -1,8 +1,8 @@
 {
-  "name": "@area44/imagesoptimizer",
+  "name": "@area44/image-wizard",
   "version": "23.8.8",
   "private": "true",
-  "description": "Images optimizer using Node.js",
+  "description": "Image tools using Node.js",
   "keywords": [
     "imagemin",
     "optimizer",

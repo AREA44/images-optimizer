@@ -1,8 +1,8 @@
 {
-  "name": "@area44/imagesoptimizer",
+  "name": "@area44/image-wizard",
   "version": "23.8.8",
   "private": "true",
-  "description": "Images optimizer using Node.js",
+  "description": "Image tools using Node.js",
   "keywords": [
     "imagemin",
     "optimizer",
@@ -20,7 +20,7 @@
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^10.0.1",
-    "imagemin-webp": "^8.0.0"
+    "sharp": "^0.32.4"
   },
   "packageManager": "pnpm@8.6.12"
 }

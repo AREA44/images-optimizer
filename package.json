@@ -1,26 +1,22 @@
 {
   "name": "@area44/image-wizard",
-  "version": "23.8.8",
+  "version": "23.8.26",
   "private": "true",
-  "description": "Image tools using Node.js",
+  "description": "Image processing tools built with Node.js",
   "keywords": [
-    "imagemin",
     "optimizer",
-    "minify"
+    "minify",
+    "sharp"
   ],
-  "homepage": "https://github.com/AREA44/node-imagesOptimizer#readme",
+  "homepage": "https://github.com/AREA44/node-image-wizard#readme",
   "license": "MIT",
   "author": {
     "name": "ARE44",
     "url": "https://github.com/AREA44"
   },
+  "type": "module",
   "dependencies": {
-    "imagemin": "^8.0.1",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^9.0.2",
-    "imagemin-svgo": "^10.0.1",
-    "sharp": "^0.32.4"
+    "sharp": "^0.32.5"
   },
   "packageManager": "pnpm@8.6.12"
 }

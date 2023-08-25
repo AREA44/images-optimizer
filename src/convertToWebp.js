@@ -10,24 +10,22 @@ export function convertToWebp(directoryPath) {
     }
 
     const imageFiles = files.filter((file) =>
-      ['.png', '.jpg', '.jpeg'].includes(extname(file).toLowerCase()),
+      ['.jpg', '.jpeg', '.png'].includes(extname(file).toLowerCase()),
     )
 
     imageFiles.forEach((file) => {
-      const inputPath = join(directoryPath, file)
-      const outputPath = join('dist', `${basename(file, extname(file))}.webp`)
+      const inputFile = join(directoryPath, file)
+      const outputFile = join('dist', `${basename(file, extname(file))}.webp`)
 
-      sharp(inputPath)
+      sharp(inputFile)
         .webp()
-        .toFile(outputPath, (err) => {
+        .toFile(outputFile, (err) => {
           if (err) {
-            console.error('Error converting image:', err)
-            return
+            console.error(`Error convert ${inputFile}:`, err)
+          } else {
+            console.log(`Conveted ${inputFile}`)
           }
         })
     })
-    console.log('Images converted:', imageFiles)
   })
 }
-
-convertToWebp('./images')

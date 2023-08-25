@@ -4,7 +4,7 @@ Image Wizard is a collection of image processing tools built with Node.js. This 
 
 ## Features
 
-- Optimizing JPG, JPEG, PNG, SVG, and GIF images.
+- Optimizing JPG, JPEG, PNG, and GIF images.
 - Converting JPG, JPEG, and PNG images to WebP format.
 
 ## Getting Started

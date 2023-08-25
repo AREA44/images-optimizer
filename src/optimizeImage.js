@@ -1,8 +1,8 @@
 import sharp from 'sharp'
 import { readdir } from 'fs'
-import { extname, join, basename } from 'path'
+import { extname, join } from 'path'
 
-export function convertToWebp(directoryPath) {
+export function optimizeImage(directoryPath) {
   readdir(directoryPath, (err, files) => {
     if (err) {
       console.error('Error reading directory:', err)
@@ -10,20 +10,21 @@ export function convertToWebp(directoryPath) {
     }
 
     const imageFiles = files.filter((file) =>
-      ['.jpg', '.jpeg', '.png'].includes(extname(file).toLowerCase()),
+      ['.jpg', '.jpeg', '.png', 'gif'].includes(extname(file).toLowerCase()),
     )
 
     imageFiles.forEach((file) => {
       const inputFile = join(directoryPath, file)
-      const outputFile = join('dist', `${basename(file, extname(file))}.webp`)
+      const outputFile = join('dist', file)
 
+      const format = extname(file).toLowerCase().slice(1)
       sharp(inputFile)
-        .webp()
+        .toFormat(format, { quality: 75 })
         .toFile(outputFile, (err) => {
           if (err) {
-            console.error(`Error convert ${inputFile}:`, err)
+            console.error(`Error optimizing ${inputFile}:`, err)
           } else {
-            console.log(`Conveted ${inputFile}`)
+            console.log(`Optimized ${inputFile}`)
           }
         })
     })

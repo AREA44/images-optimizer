@@ -10,7 +10,7 @@ export function optimizeImage(directoryPath) {
     }
 
     const imageFiles = files.filter((file) =>
-      ['.jpg', '.jpeg', '.png', 'gif'].includes(extname(file).toLowerCase()),
+      ['.jpg', '.jpeg', '.png', '.gif'].includes(extname(file).toLowerCase()),
     )
 
     imageFiles.forEach((file) => {

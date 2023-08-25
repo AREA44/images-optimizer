@@ -2,6 +2,7 @@
   "name": "@area44/image-wizard",
   "version": "23.8.8",
   "private": "true",
+  "type": "module",
   "description": "Image tools using Node.js",
   "keywords": [
     "imagemin",

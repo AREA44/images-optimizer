@@ -1,31 +1,36 @@
 import sharp from 'sharp'
-import { readdir } from 'fs'
+import { readdirSync, mkdirSync } from 'fs'
 import { extname, join, basename } from 'path'
 
-export function convertToWebp(directoryPath) {
-  readdir(directoryPath, (err, files) => {
-    if (err) {
-      console.error('Error reading directory:', err)
-      return
-    }
+export async function convertToWebp(directoryPath) {
+  try {
+    const files = readdirSync(directoryPath)
 
     const imageFiles = files.filter((file) =>
       ['.jpg', '.jpeg', '.png'].includes(extname(file).toLowerCase()),
     )
 
-    imageFiles.forEach((file) => {
-      const inputFile = join(directoryPath, file)
-      const outputFile = join('dist', `${basename(file, extname(file))}.webp`)
+    const outputDirectory = 'dist'
+    mkdirSync(outputDirectory, { recursive: true })
 
-      sharp(inputFile)
-        .webp()
-        .toFile(outputFile, (err) => {
-          if (err) {
-            console.error(`Error convert ${inputFile}:`, err)
-          } else {
-            console.log(`Conveted ${inputFile}`)
-          }
-        })
-    })
-  })
+    await Promise.all(
+      imageFiles.map(async (file) => {
+        const inputFile = join(directoryPath, file)
+        const outputFile = join(
+          outputDirectory,
+          `${basename(file, extname(file))}.webp`,
+        )
+
+        try {
+          await sharp(inputFile).webp().toFile(outputFile)
+          console.log(`Converted ${inputFile}`)
+        } catch (err) {
+          console.error(`Error converting ${inputFile}:`, err)
+        }
+      }),
+    )
+  } catch (err) {
+    console.error('Error reading directory:', err)
+    return Promise.reject(err)
+  }
 }

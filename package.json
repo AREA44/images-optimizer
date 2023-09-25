@@ -1,6 +1,6 @@
 {
   "name": "@area44/image-wizard",
-  "version": "23.8.26",
+  "version": "23.9.25",
   "private": "true",
   "description": "Image processing tools built with Node.js",
   "keywords": [
@@ -16,7 +16,7 @@
   },
   "type": "module",
   "dependencies": {
-    "sharp": "^0.32.5"
+    "sharp": "^0.32.6"
   },
-  "packageManager": "pnpm@8.6.12"
+  "packageManager": "pnpm@8.7.6"
 }
